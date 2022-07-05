@@ -44,42 +44,42 @@ class InformationController extends Controller
     }
     public function male()
     {
-        $males = DB::table('information')->where('gender', '=', 'male')->get();
-        return view('information.male', compact('males'));
+        $informations = DB::table('information')->where('gender', '=', 'male')->get();
+        return view('information.index', compact('informations'));
     }
     public function female()
     {
-        $females = DB::table('information')->where('gender', '=', 'female')->get();
-        return view('information.female', compact('females'));
+        $informations = DB::table('information')->where('gender', '=', 'female')->get();
+        return view('information.index', compact('informations'));
     }
     public function bachelor()
     {
-        $bachelors = DB::table('information')->where('education', '=', 'bachelor')->get();
-        return view('information.bachelor', compact('bachelors'));
+        $informations = DB::table('information')->where('education', '=', 'bachelor')->get();
+        return view('information.index', compact('informations'));
     }
     public function master()
     {
-        $masters = DB::table('information')->where('education', '=', 'master')->get();
-        return view('information.master', compact('masters'));
+        $informations = DB::table('information')->where('education', '=', 'master')->get();
+        return view('information.index', compact('informations'));
     }
     public function tehran()
     {
-        $tehrans = DB::table('information')->where('city', '=', 'tehran')->get();
-        return view('information.tehran', compact('tehrans'));
+        $informations = DB::table('information')->where('city', '=', 'tehran')->get();
+        return view('information.index', compact('informations'));
     }
     public function mashhad()
     {
-        $mashhads = DB::table('information')->where('city', '=', 'mashhad')->get();
-        return view('information.mashhad', compact('mashhads'));
+        $informations = DB::table('information')->where('city', '=', 'mashhad')->get();
+        return view('information.index', compact('informations'));
     }
     public function esfahan()
     {
-        $esfahans = DB::table('information')->where('city', '=', 'esfahan')->get();
-        return view('information.esfahan', compact('esfahans'));
+        $informations = DB::table('information')->where('city', '=', 'esfahan')->get();
+        return view('information.index', compact('informations'));
     }
     public function sort()
     {
-        $sorts = DB::table('information')->orderBy('age')->get();
-        return view('information.sort', compact('sorts'));
+        $informations = DB::table('information')->orderBy('age')->get();
+        return view('information.index', compact('informations'));
     }
 }
